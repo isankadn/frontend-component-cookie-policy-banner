@@ -24,12 +24,12 @@ const IETF_TAGS = Object.freeze([ENGLISH_IETF_TAG, SPANISH_IETF_TAG]);
 const LANGUAGE_CODES = Object.freeze([ENGLISH_LANGUAGE_CODE, SPANISH_LANGUAGE_CODE]);
 
 const IETF_TAGS_TO_CONTAINER_ROLE_LABEL = Object.freeze({
-  [ENGLISH_IETF_TAG]: 'Notice about use of cookies on edx.org.',
-  [SPANISH_IETF_TAG]: 'Aviso sobre el uso de cookies en edx.org.',
+  [ENGLISH_IETF_TAG]: 'Notice about use of cookies on openlearning.unesco.org.',
+  [SPANISH_IETF_TAG]: 'Aviso sobre el uso de cookies en openlearning.unesco.org.',
 });
 const IETF_TAGS_TO_CLOSE_BUTTON_LABEL = Object.freeze({
-  [ENGLISH_IETF_TAG]: 'Close the notice about use of cookies on edx.org.',
-  [SPANISH_IETF_TAG]: 'Cerrar aviso sobre el uso de cookies en edx.org.',
+  [ENGLISH_IETF_TAG]: 'Close the notice about use of cookies on openlearning.unesco.org.',
+  [SPANISH_IETF_TAG]: 'Cerrar aviso sobre el uso de cookies en openlearning.unesco.org.',
 });
 const IETF_TAGS_TO_LANGUAGE_CODE = Object.freeze({
   [ENGLISH_IETF_TAG]: ENGLISH_LANGUAGE_CODE,
@@ -48,12 +48,12 @@ const getPolicyHTML = (tag, overrideText = {}) => {
   const linkClose = '</a>';
 
   if (tag === SPANISH_IETF_TAG) {
-    const linkOpen = '<a href="https://edx.org/es/edx-privacy-policy" class="policy-link" target = "_blank">';
-    return `edX y sus Miembros usan cookies y otras tecnologías de seguimiento para fines de rendimiento, análisis y marketing. Al usar este sitio web, aceptas este uso. Obtén más información sobre estas tecnologías en la ${linkOpen}Política de privacidad${linkClose}.`;
+    const linkOpen = '<a href="https://www.unesco.org/en/website-privacy-notice" class="policy-link" target = "_blank">';
+    return `La UNESCO utiliza cookies y otras tecnologías de seguimiento con fines analíticos y de rendimiento. Al usar este sitio web, aceptas este uso. Obtén más información sobre estas tecnologías en la ${linkOpen}Política de privacidad${linkClose}.`;
   }
 
-  const linkOpen = '<a href="https://edx.org/edx-privacy-policy" class="policy-link" target = "_blank">';
-  return `edX and its Members use cookies and other tracking technologies for performance, analytics, and marketing purposes. By using this website, you accept this use. Learn more about these technologies in the ${linkOpen}Privacy Policy${linkClose}.`;
+  const linkOpen = '<a href="https://www.unesco.org/en/website-privacy-notice" class="policy-link" target = "_blank">';
+  return `UNESCO use cookies and other tracking technologies for performance and analytics purposes. By using this website, you accept this use. Learn more about these technologies in the ${linkOpen}Privacy Policy${linkClose}.`;
 };
 
 const COOKIE_POLICY_VIEWED_NAME = 'edx-cookie-policy-viewed';
@@ -74,3 +74,5 @@ export {
   COOKIE_POLICY_VIEWED_NAME,
   STAGE_ENVIRONMENTS,
 };
+
+
